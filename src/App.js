@@ -25,7 +25,7 @@ function App() {
 
   const handlePostToAPI = () => {
     const dataToPost = prepareDataForAPI();
-    // Use fetch or axios to send the data to the API
+    
     fetch('/api/data', {
       method: 'POST',
       headers: {
@@ -34,11 +34,11 @@ function App() {
       body: JSON.stringify(dataToPost)
     })
       .then(response => {
-        // Handle the API response
+       
         console.log('Data posted successfully');
       })
       .catch(error => {
-        // Handle any errors
+        
         console.error('Error posting data:', error);
       });
   };
